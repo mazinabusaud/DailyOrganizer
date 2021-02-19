@@ -1,0 +1,10 @@
+/* Placeholder for common css selectors */
+
+body {
+  background-color: lightblue;
+  padding: 20px;
+}
+
+textarea{
+  font-family: 'Caveat', cursive;
+}

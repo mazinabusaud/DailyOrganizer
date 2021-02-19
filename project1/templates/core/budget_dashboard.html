@@ -1,0 +1,13 @@
+{% if budget_db_actual %}
+<div class="ct-chart ct-golden-section" id="chart1"></div>
+<form action="\budget\">
+  <input type="submit" class="btn btn-primary" value = "Budget" />
+</form>
+<script>new Chartist.Bar('#chart1', {
+  labels: {{row_tot}},
+  series: [{{budget_db_projected}},{{budget_db_actual}}]
+});</script>
+
+{%else%}
+<h4>There are no costs defined.</h4>
+{%endif%}

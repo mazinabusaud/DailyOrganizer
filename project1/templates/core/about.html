@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <title>Organizer</title>
+    {% include "core/shared_links.html" %}
+</head>
+<br>
+
+<h1>CINS 465: Project 1 by Mazin Abusaud</h1>
+<body>
+  {% include "core/navbar.html" %}
+
+
+    <img class = "pic" src="{% static "image/mazin.jpg" %}" alt="Picture of Me " height="400px">
+    <h3 class= "about_head">About</h3>
+    <div class="about">
+
+    <p>
+
+            I am currently a junior here at CSU Chico and am a computer science major.<br> I have many hobbies such as collecting records, painting, drawing,
+        playing video games,<br> and coding. I also really love to fish. I am also a first generation college student so it is <br>really important to me and my family that I do well. I enjoy almost <br>all of my classes
+        that I have taken here so far and this one has<br> become one of my favorites. I am excited to learn from this class.
+    </p>
+    <ol>
+        <li>To begin with, I first followed the plan of attack very closely</li>
+        <li>I first began by getting all my default html pages created such as home, tasks ,budget login, logout, and join</li>
+        <li>after that, I then linked them all together with a nav bar and made sure that it worked</li>
+        <li>Once I had that done, I then created a statics folder where my css, js, and image would be stored and created files in each of them</li>
+        <li>Then, I went into templates and put all of my html pages into there</li>
+        <li>Once that was done, I adjusted my views to render my html pages from my templates</li>
+        <li>Once I had all the pages rendering correctly from template, I began working on user registration and login</li>
+        <li>After all that was done I then started on getting my tasks page set up properly</li>
+        <li>I used the code given for tasks, but for some reason after several hours I could not get my delete button to work, so I then began using the provided template</li>
+        <li>Once I had the tasks working properly and the graph for it displaying on the dashboard I then moved on to budget</li>
+        <li>For the budget page, I pretty much just adjusted as need from what we did for tasks</li>
+        <li>I then researched what I needed to do for the bar chart on the chartist site as well as Github</li>
+        <li>I ended up renaming the chart with a different ID because it was causing the tasks chart to disappear</li>
+        <li>I ended up using a for loop the labels and placed my actual and projected costs from my model into two seperate lists that I used for the series</li>
+        <li>Once I had the budget dashboard loading correctly, I then began to work on my about page to summarize what I have done to get it working</li>
+        <li>I ran out of time to get my surplus and deficit displaying, so this is where I stopped to record my video</li>
+        <li>I have been working on this project for a long time now and it has taken many hours, I feel I learned a good amount about Django but was also very confused at some parts</li>
+    </ol>
+</div>
+</body>

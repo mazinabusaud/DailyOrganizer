@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard</title>
+  {% include "core/shared_links.html" %}
+</head>
+<body>
+  {% include "core/navbar.html" %}
+  <h1>Dashboard</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="container-fluid">
+        {% include "core/tasks_dashboard.html" %}
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="container-fluid">
+        <div class = "jumbotron">
+          <div align="center">
+            <h2>Budget</h2>
+            {% include "core/budget_dashboard.html" %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="container-fluid">
+          <div class = "jumbotron">
+            <div align="center">
+              <h2>Journal</h2>
+              {% if total_j == 0 %}
+              <p>There are no journal entries.</p>
+               {%elif total_j == 1 %}
+               <p>There is {{ total_j }} journal entry.</p>
+               {% elif total_j > 1 %}
+               <p>There are {{ total_j }} entries.</p>
+               {% endif %}
+               {% if last_date.track == 0 %}
+               <p>The last journal entry was today.</p>
+               {% else %}
+               <p>It has been {{ last_date.track }} day(s) since last journal entry.</p>
+               {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+    </html>

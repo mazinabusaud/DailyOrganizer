@@ -1,0 +1,30 @@
+
+<html lang="en" dir="ltr">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <style>
+    textarea{
+      font-family: 'Caveat', cursive !important;
+    }
+    </style>
+  <meta charset="utf-8">
+  <title>Add New Journal</title>
+  {% include "core/shared_links.html" %}
+</head>
+<body>
+
+  {% include "core/navbar.html" %}
+  <div class="jumbotron">
+    <h1>Add New Journal</h1>
+    <form method="POST">
+
+      {% csrf_token %}
+      <table>
+        {{ form_data.as_table }}
+      </table>
+      <a href="/journal/" class="btn btn-secondary">Cancel</a>
+      <input type="submit" class="btn btn-primary" name="add" value = "Add Journal">
+    </form>
+  </div>
+</body>
+</html>

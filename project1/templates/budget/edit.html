@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Edit Cost</title>
+  {% include "core/shared_links.html" %}
+</head>
+<body>
+  {% include "core/navbar.html" %}
+  <div class="jumbotron">
+    <h1>Edit Cost</h1>
+    <form method="POST">
+      {% csrf_token %}
+      <table>
+        {{ form_data.as_table }}
+      </table>
+      <a href="/budget/" class="btn btn-secondary">Cancel</a>
+      <input type="submit" class="btn btn-primary" name="update" value = "Update Cost">
+    </form>
+  </div>
+</body>
+</html>
